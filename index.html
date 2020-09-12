@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            user-select: none;
+        }
+
+        #canvas {
+            grid-area: canvas;
+        }
+
+        #health {
+            grid-area: health;
+        }
+
+        #lightningCharge {
+            grid-area: lightningCharge;
+        }
+
+        #currentSpell {
+            grid-area: currentSpell;
+        }
+
+        #waveCount {
+            grid-area: waveCount;
+        }
+
+        #restartButton {
+            grid-area: restartButton;
+        }
+
+        #container {
+            display: grid;
+            grid-template-areas: 
+                "canvas health"
+                "canvas lightningCharge"
+                "canvas currentSpell"
+                "canvas waveCount"
+                "canvas restartButton";
+
+        }
+
+    </style>
+    
+</head>
+<body>
+
+    <div id="container">
+        <canvas id="canvas" width="1000" height="600">Sorry, your browser does not support the canvas tag.</canvas>
+        <h2 id="health">Health: <br><progress id="healthbar" value="100" max="100"> </progress></h2>
+        <h2 id="lightningCharge">Lightning Charge: <progress id="lightningBar" value="100" max="100"> </progress></h2>
+        <h2 id="currentSpell"></h2>
+        <h2 id="waveCount"></h2>
+        <button type="button" id="restartButton" onclick="window.location.reload()" style="visibility: hidden; font-size: 16px;">Play Again?</button>
+    </div>
+
+
+    <script type="module" src="main.js"></script>
+    <script type="module" src="victor.js"></script>
+    
+</body>
+</html>
